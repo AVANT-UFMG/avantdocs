@@ -33,7 +33,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-logo: /assets/images/logo.png
+logo: assets/images/logo.png
 
 color_scheme: light
 
