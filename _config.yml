@@ -20,9 +20,7 @@
 
 title: AVANT Docs
 email: avant.ufmg@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Esse site reúne documentação dos projetos e tutoriais desenvolvidos pela AVANT, 
-  equipe de drones autônomos da UFMG.
+description: 
 baseurl: "/avantdocs" # the subpath of your site, e.g. /blog
 url: "https://eletronica-avant-ufmg.github.io/avantdocs/" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: avant_ufmg
