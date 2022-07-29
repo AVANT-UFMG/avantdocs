@@ -29,7 +29,7 @@ instagram_username: avant_ufmg
 github_username:  Eletronica-AVANT-UFMG
 
 # Build settings
-remote_theme: "pmarsceill/just-the-docs"
+remote_theme: just-the-docs/just-the-docs
 
 plugins:
   - jekyll-feed
