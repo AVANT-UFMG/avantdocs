@@ -2,7 +2,7 @@
 layout: default
 title: Guia de Aprendizado
 nav_order: 2
-permalink: /docs/guia
+permalink: /docs
 ---
 
 # Guia de Aprendizado
