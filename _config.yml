@@ -22,7 +22,7 @@ title: AVANT Docs
 email: avant.ufmg@gmail.com
 description: 
 baseurl: "/avantdocs" # the subpath of your site, e.g. /blog
-url: "https://eletronica-avant-ufmg.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://avant-ufmg.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: avant_ufmg
 github_username:  Eletronica-AVANT-UFMG
 
