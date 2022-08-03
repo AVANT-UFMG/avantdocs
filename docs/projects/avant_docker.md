@@ -5,7 +5,7 @@ parent: Projetos
 nav_order: 1
 ---
 
-# O projeto avant docker
+# O projeto AVANT Docker
 ## _Um ambiente para execução dos projetos da equipe_
 
 AVANT Docker é um ambiente personalizado com todas as dependências que a equipe
@@ -58,7 +58,7 @@ Containers Docker possuem a habilidade de criar um volume na sua máquina, ou se
 
 Dessa maneira, se o volume também for um repositório GIT, você pode subir o container de forma limpa e, quando ele subir, os dados nesse diretório serão importados para dentro do container. Se modificar esses arquivos durante o desenvolvimento do código e quiser salvar essas modificações, você pode usar o GIT na sua própria máquina para manter o versionamento do volume. 
 
-![Exemplo de como funcionam os volumes](https://github.com/Eletronica-AVANT-UFMG/avantdocs/blob/gh-pages/assets/images/volume_example.png)
+![Exemplo de como funcionam os volumes](https://github.com/AVANT-UFMG/avantdocs/blob/gh-pages/assets/images/volume_example.png)
 
 ## Mas como eu crio um volume?
 
