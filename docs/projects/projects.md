@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projetos
-has_childre: true
+has_children: true
 nav_order: 4
 ---
 

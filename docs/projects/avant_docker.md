@@ -42,8 +42,8 @@ sudo ./run.sh --OPÇÃO
 
 | Opção | Desrição |
 | :---: | :---:    |
-|focal  | Utiliza a placa de vídeo do seu computador para renderizar aplicações |
-|focal-nogpu | ***Não*** utiliza a placa de vídeo para renderizar aplicações |
+| focal  | Utiliza a placa de vídeo do seu computador para renderizar aplicações |
+| focal-nogpu | ***Não*** utiliza a placa de vídeo para renderizar aplicações |
 
 ***Atenção:*** Não se confunda, o docker avant vai renderizar as interfaces gráficas
 independentemente da opção escolhida, aqui você escolhe somente ***COMO*** ele fará isso.
