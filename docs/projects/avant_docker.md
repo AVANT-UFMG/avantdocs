@@ -16,14 +16,14 @@ de eletrônica utiliza para testar e desenvolver software para os drones projeta
 Na Avant, utilizamos muitos softwares que precisam de um passo a passo rigoroso no 
 momento da instalação, qualquer erro pode acabar fazendo com que a instalação seja 
 incompleta e o sistema não funciona de maneira correta. Além disso, pessoas diferentes
-possuem dispositivos diferetes, e portanto, configurações diferents. Isso é um outro
+possuem dispositivos diferetes, e portanto, configurações diferentes. Isso é um outro
 fator que pode gerar instalações e ou configurações adicionais, ou seja, mais dor 
 de cabeça. O avant docker vem para resolver esses problemas, visto que todos da 
 equipe podem utilizar o mesmo ambiente com as configurações exatamente iguais.
 
 ## Instalação
 
-Avant docker é um container [Docker](https://docs.docker.com/engine/install/), e é tudo que precisa ser instalado. 
+Avant docker é um container [Docker](https://docs.docker.com/engine/install/), e esse é o único programa precisa ser instalado. 
 Para versionamento de código, pode ser útil instalar o [GIT](https://git-scm.com/downloads).
 
 ## Executando o ambiente
@@ -43,20 +43,22 @@ sudo ./run.sh --OPÇÃO
 | Opção | Desrição |
 | :---: | :---:    |
 | focal  | Utiliza a placa de vídeo do seu computador para renderizar aplicações |
-| focal-nogpu | ***Não*** utiliza a placa de vídeo para renderizar aplicações |
+| focal-nogpu | ***Não*** utiliza a placa de vídeo do seu computador para renderizar aplicações |
 
 ***Atenção:*** Não se confunda, o docker avant vai renderizar as interfaces gráficas
 independentemente da opção escolhida, aqui você escolhe somente ***COMO*** ele fará isso.
 ## Permanência de dados
 
 Containers docker são feitos para serem efêmeros, e por isso, não podemos armazenar
-nada dentro deles, já que, mais cedo ou mais tarde, eles deixarão de existir.
+nada dentro deles, já que, mais cedo ou mais tarde, eles poderão deixar de existir.
 
 Não se preocupe, GIT vem para te salvar.
 
-Containers Docker possuem a habilidade de criar um volume na sua máquina, ou seja, permitem sincronizar diretórios entre o host e o container. Se você cria um volume em seu computador, tudo que for alterado nesse volume será alterado dentro e fora do container, e isso vai para ambos os lados: Se você alterar o volume em seu computador, o mesmo volume se altera dentro do container, e se você altera um volume dentro do container, o mesmo volume se altera dentro do seu computador.
+Containers Docker possuem a habilidade de criar um volume na sua máquina, ou seja, permitem sincronizar diretórios entre o host e o container. Se você criar um volume em seu computador, tudo que for alterado nesse volume será alterado dentro e fora do container, e isso vai para ambos os lados: Se você alterar algum arquivo no volume em seu computador, o mesmo arquivo no mesmo volume se alterará dentro do container, e se você altera um arquivo no volume dentro do container, o mesmo arquivo no mesmo volume se altera dentro do seu computador.
 
 Dessa maneira, se o volume também for um repositório GIT, você pode subir o container de forma limpa e, quando ele subir, os dados nesse diretório serão importados para dentro do container. Se modificar esses arquivos durante o desenvolvimento do código e quiser salvar essas modificações, você pode usar o GIT na sua própria máquina para manter o versionamento do volume. 
+
+![Exemplo de como funcionam os volumes](../../assets/images/volume_example.png)
 
 ## Mas como eu crio um volume?
 
@@ -66,4 +68,4 @@ Isso é muito simples, o script de execução já faz isso para você, uma vez q
 sudo ./run.sh --OPÇÃO --run-args "-v /CAMINHO/HOST:/CAMINHO/CONTAINER"
 ```
 
-***Atenção:*** Os caminhos passados precisam sem caminhos completos (absolutos), e não se preocupe se o diretório não existir dentro do container, ele será criado automaticamente!
+***Atenção:*** Os caminhos passados precisam ser caminhos completos (absolutos), e não se preocupe se o diretório não existir dentro do container, ele será criado automaticamente!
