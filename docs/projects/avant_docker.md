@@ -32,6 +32,7 @@ Para executar o container, apenas digite:
 ```
 sudo ./run.sh --OPÇÃO
 ```
+
 | Opção | Desrição |
 | :---: | :---:    |
 |focal  | Utiliza a placa de vídeo do seu computador para renderizar aplicações |
