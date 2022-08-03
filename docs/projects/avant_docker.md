@@ -1,3 +1,10 @@
+---
+layout: default
+title: Avant Docker
+parent: Projetos
+nav_order: 1
+---
+
 # O projeto avant docker
 ## _Um ambiente para execução dos projetos da equipe_
 
