@@ -1,8 +1,8 @@
 ---
 layout: default
-nav_order: 1
-parent: Hardware
 title: Instalar ROS no Raspberry Pi
+nav_order: 1
+parent: Tutoriais
 ---
 
 # Instalar ROS no Raspberry Pi
