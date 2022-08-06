@@ -9,10 +9,10 @@ title: Instalar ROS no Raspberry Pi
 ## Requisitos
 Para completar esse tutorial, você vai precisar de:
 - Computador/Notebook
-- Raspberry Pi Model 3B+
+- Raspberry Pi (qualquer um dos modelos 2/3/4/400)
 - Cartão micro SD
-    - Class 10
-    - Mínimo: 8 GB, recomendável: 16 GB ou 32 GB
+    - Class 10 (recomendável, por ser mais rápido, mas não obrigatório)
+    - Mínimo: 4 GB para Ubuntu Server, 8 GB para Ubuntu Mate; recomendável: 16 GB ou 32 GB
 - Adaptador de cartão micro SD para conectá-lo ao seu computador
 
 ## Instalando o OS adequado
@@ -62,14 +62,37 @@ Depois que o sistema tiver iniciado, ele vai te pedir nome de usuário e senha p
 **TODO**
 
 ### ROS 2
-Para instalar o ROS Humble no Ubuntu Server, basta seguir as instruções no [site oficial](http://docs.ros.org.ros.informatik.uni-freiburg.de/en/humble/Installation/Ubuntu-Install-Debians.html). Contudo, alguns comandos são muito grandes e chatos de digitar, o que pode resultar em erros. Por isso, recomendamos que use um script bash para instalar tudo. Baixe o script que fizemos [neste link](https://drive.google.com/uc?export=download&id=1gVz1G-KqCqOMb2CN7-0L-HLPz_UIy5Hd) (rovavelmente, o Google vai ter dar um aviso de segurança, mas pode confiar na gente). Ele recebe como primeiro parâmetro o nome da distribuição do ROS que você deseja instalar.
+Para instalar o ROS Humble no Ubuntu Server, basta seguir as instruções no [site oficial](http://docs.ros.org.ros.informatik.uni-freiburg.de/en/humble/Installation/Ubuntu-Install-Debians.html) como se estivesse instalando no Ubuntu Desktop. Contudo, alguns comandos são muito grandes e chatos de digitar, o que pode resultar em erros. Por isso, recomendamos que use um script bash para instalar tudo. Baixe o script que fizemos [neste link](https://drive.google.com/uc?export=download&id=1gVz1G-KqCqOMb2CN7-0L-HLPz_UIy5Hd) (provavelmente, o Google vai te dar um aviso de segurança, mas pode confiar na gente). Ele recebe como primeiro parâmetro o nome da distribuição do ROS que você deseja instalar.
 
 ```
 # Exemplo: instalar o ROS Humble
 bash install_ros2.sh humble
 ```
 
+Para executar o script no Raspberry Pi, salve-o num pen drive ou cartão SD e insira o dispositivo no qual o script foi salvo no Raspberry. No Ubuntu MATE, é fácil: basta usar a interface gráfica para mover o script do dispositivo de armazenamento para o Rasperry Pi e executá-lo. No Ubuntu Server, é um pouco mais complicado, por não haver interface gráfica. Então, primeiro execute o comando
+
+```
+lsblk
+```
+
+Ele vai listar um monte de coisa, mas o que te interessa são os que têm o tipo `disk` e tamanho igual ao do seu pen drive ou cartão SD. O nome que você procure `sda` ou `sdb`, e, possivelmente, com um número no final, como `sdb1`. Um exemplo está mostrado abaixo.
+
+![Exemplo do lsblk](/assets/images/tutorials/ros_rasppi/find_drive.png)
+
+Então, monte o dispositivo. **Esse exemplo assume que o nome do dispositivo é `sda`, troque pelo nome que você encontrou com o `lsblk`!**.
+
+```
+mkdir /media/usb
+sudo mount /dev/sda /media/usb  # troque sda pelo nome que apareceu no seu computador!
+```
+
+Agora, tudo que estava salvo no pen drive/cartão SD está na pasta /media/usb. Então, para executar o script de instalação,
+
+```
+cd /media/usb                   # ir para a pasta
+bash install_ros2.sh humble     # instalar o ros humble
+```
+
 Ele deve pedir para você confirmar algumas coisas com o teclado a longo do caminho. Quando terminar de instalar, você já vai ter o ROS 2 instalado e funcionando!
 
-> **Importante**: esse script instalado a versão básica do ROS, então não tem RViz, Gazebo, e nenhuma ferramenta com interface gráfica. Ele foi pensando para ser usado no Ubuntu Server, então não precisa dessas coisas.
-
+> **Importante**: esse script instala a versão básica do ROS 2, então não tem RViz, Gazebo, e nenhuma ferramenta com interface gráfica. Ele foi pensando para ser usado no Ubuntu Server, então não precisa dessas coisas. Se quiser instalar a versão desktop (a que todas essas ferramentas), use esse [script](https://drive.google.com/uc?export=download&id=1h29pv2KkwFuNNKKnq_X-4k9W9TIir0Vq).
