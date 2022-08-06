@@ -38,15 +38,15 @@ sudo snap install rpi-imager
 
 Se a instalação for bem sucedida, abra o Raspberry Pi Imager.
 
-![Tela inicial do Raspberry Pi Imager](/assets/images/tutorials/ros_rasppi/imager_home.png)
+![Tela inicial do Raspberry Pi Imager](/avantdocs/assets/images/tutorials/ros_rasppi/imager_home.png)
 
 Então, clique em `CHOOSE OS` e escolha o Ubuntu Server 22.04 para arquiteturas `amd64` (o ROS Humble não suporta `amrhf`).
 
-![Primeiro passo na escolha do sistema operacional](/assets/images/tutorials/ros_rasppi/imager_os_step1.png)
+![Primeiro passo na escolha do sistema operacional](/avantdocs/assets/images/tutorials/ros_rasppi/imager_os_step1.png)
 
-![Segundo passo na escolha do sistema operacional](/assets/images/tutorials/ros_rasppi/imager_os_step2.png)
+![Segundo passo na escolha do sistema operacional](/avantdocs/assets/images/tutorials/ros_rasppi/imager_os_step2.png)
 
-![Terceiro passo na escolha do sistema operacional](/assets/images/tutorials/ros_rasppi/imager_os_step3.png)
+![Terceiro passo na escolha do sistema operacional](/avantdocs/assets/images/tutorials/ros_rasppi/imager_os_step3.png)
 
 Em seguida, insira seu cartão no micro SD no computador. Então, clique em `CHOOSE STORAGE` e selecione seu cartão micro SD para salvar o Ubuntu nele. Por fim, clique em `WRITE` e espere terminar.
 
