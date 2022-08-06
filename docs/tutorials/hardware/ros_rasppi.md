@@ -77,7 +77,7 @@ lsblk
 
 Ele vai listar um monte de coisa, mas o que te interessa são os que têm o tipo `disk` e tamanho igual ao do seu pen drive ou cartão SD. O nome que você procure `sda` ou `sdb`, e, possivelmente, com um número no final, como `sdb1`. Um exemplo está mostrado abaixo.
 
-![Exemplo do lsblk](/assets/images/tutorials/ros_rasppi/find_drive.png)
+![Exemplo do lsblk](/avantdocs/assets/images/tutorials/ros_rasppi/find_drive.png)
 
 Então, monte o dispositivo. **Esse exemplo assume que o nome do dispositivo é `sda`, troque pelo nome que você encontrou com o `lsblk`!**.
 
